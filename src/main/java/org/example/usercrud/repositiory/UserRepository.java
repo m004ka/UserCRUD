@@ -1,2 +1,8 @@
-package org.example.usercrud.repositiory;public interface UserRepository {
+package org.example.usercrud.repositiory;
+
+import org.example.usercrud.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User getUserById(Long id);
 }
